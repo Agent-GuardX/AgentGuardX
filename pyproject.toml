@@ -1,0 +1,19 @@
+[project]
+name = "agentguardx"
+version = "0.2.0"
+description = "AI agent security red-team toolkit for defensive testing"
+readme = "README.md"
+requires-python = ">=3.10"
+license = {text = "Apache-2.0"}
+authors = [{name = "AgentGuardX"}]
+dependencies = ["httpx>=0.27", "pyyaml>=6.0", "typer>=0.12", "rich>=13.7"]
+
+[project.optional-dependencies]
+dev = ["pytest>=8.0", "ruff>=0.6", "fastapi>=0.111", "uvicorn>=0.30"]
+
+[project.scripts]
+agentguardx = "agentguardx.cli:app"
+
+[tool.ruff]
+line-length = 100
+target-version = "py310"
